@@ -16,5 +16,15 @@
         <input type="radio" name="role" value="admin">admin<br>
         <input type="submit" value="Add user"><br>
     </form>
+
+    <?php
+        include_once("connection.php");
+        $stmt1=$conn->prepare("SELECT * FROM tblusers");
+        $stmt1->execute();
+        while ($row = $stmt1->fetch(PDO::FETCH_ASSOC))
+        {
+            echo($row["Surname"]);
+        }
+    ?>
 </body>
 </html>
