@@ -23,7 +23,7 @@
         $stmt1->execute();
         while ($row = $stmt1->fetch(PDO::FETCH_ASSOC))
         {
-            echo($row["Surname"]);
+            echo($row["Forename"]." ".$row["Surname"]."<br>");
         }
     ?>
 </body>
